@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="455.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Table.JourController">
+   <children>
+      <ChoiceBox fx:id="tabJourStation" layoutX="31.0" layoutY="58.0" prefHeight="25.0" prefWidth="186.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="37.0" />
+      <Label layoutX="32.0" layoutY="36.0" prefHeight="22.0" prefWidth="76.0" text="Station" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="tabJourDate" editable="false" layoutX="232.0" layoutY="37.0" AnchorPane.topAnchor="37.0" />
+      <Label layoutX="232.0" layoutY="10.0" prefHeight="22.0" prefWidth="76.0" text="Date" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="afficherJour" layoutX="538.0" layoutY="37.0" mnemonicParsing="false" onAction="#afficherJour" text="Afficher" AnchorPane.topAnchor="37.0">
+         <font>
+            <Font name="Cambria" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableViewJour" layoutX="32.0" layoutY="227.0" prefHeight="200.0" prefWidth="525.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="168.0">
+         <columns>
+            <TableColumn fx:id="colHoraireJour" prefWidth="114.0" text="Houraire du relevé" />
+            <TableColumn fx:id="colTemperatureJour" prefWidth="130.0" text="Temperature" />
+            <TableColumn fx:id="colHumiditeJour" prefWidth="136.0" text="Humidite" />
+            <TableColumn fx:id="colNebulositeJour" prefWidth="144.0" text="nebulosite" />
+         </columns>
+      </TableView>
+      <ProgressBar fx:id="tabJourprogressBar" layoutX="31.0" layoutY="165.0" prefHeight="37.0" prefWidth="525.0" progress="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="126.0" />
+      <Label fx:id="tabJourMessageProgression" layoutX="31.0" layoutY="126.0" prefHeight="32.0" prefWidth="527.0" text="progression du transfert des données" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="94.0">
+         <font>
+            <Font name="Cambria" size="17.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="check" layoutX="422.0" layoutY="33.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="102.0" text="CheckBox" />
+   </children>
+</AnchorPane>

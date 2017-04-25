@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="601.0" prefWidth="1149.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Index.IndexController">
+   <children>
+      <MenuBar layoutX="41.0" layoutY="24.0" prefHeight="25.0" prefWidth="405.0" AnchorPane.bottomAnchor="308.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <SplitPane dividerPositions="0.12805474095796676" layoutX="58.0" layoutY="24.0" prefHeight="309.0" prefWidth="405.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="522.0" prefWidth="232.0">
+               <children>
+                  <Accordion layoutY="29.0" prefHeight="243.0" prefWidth="144.0" AnchorPane.bottomAnchor="332.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <panes>
+                      <TitledPane animated="false" maxHeight="287.0" prefHeight="287.0" prefWidth="149.0" text="Affichage Tableau">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="btnTableauAnnee" layoutX="-5.0" mnemonicParsing="false" onAction="#afficheTableauAnnee" prefHeight="35.0" prefWidth="150.0" text="Tableau Annee" />
+                                    <Button fx:id="btnTableauMois" layoutX="-6.0" layoutY="35.0" mnemonicParsing="false" onAction="#afficheTableauMois" prefHeight="35.0" prefWidth="150.0" text="Tableau Mois" />
+                                    <Button fx:id="btnTableauJour" layoutX="-6.0" layoutY="70.0" mnemonicParsing="false" onAction="#afficheTableauJour" prefHeight="35.0" prefWidth="150.0" text="Tableau Jour" />
+                                    <Button fx:id="btnTableauHeur" layoutX="-4.0" layoutY="105.0" mnemonicParsing="false" onAction="#afficheTableauHeur" prefHeight="35.0" prefWidth="150.0" text="Tableau Heur" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                        <TitledPane prefHeight="113.0" prefWidth="144.0" text="Visualiser ">
+                           <content>
+                              <AnchorPane prefHeight="130.0" prefWidth="184.0">
+                                 <children>
+                                    <Button fx:id="btnVisualiserAnnee" layoutX="22.0" layoutY="-1.0" mnemonicParsing="false" onAction="#VisualiserAnnee" prefHeight="35.0" prefWidth="150.0" text="Visualiser Année " />
+                                    <Button fx:id="btnVisualiserMois" layoutX="21.0" layoutY="33.0" mnemonicParsing="false" onAction="#VisualiserMois" prefHeight="35.0" prefWidth="150.0" text="Visualiser Mois" />
+                                    <Button fx:id="btnVisualiserJour" layoutX="21.0" layoutY="67.0" mnemonicParsing="false" onAction="#visualiserJour" prefHeight="35.0" prefWidth="150.0" text="Visualiser Jour" />
+                                 </children>
+                              </AnchorPane>
+                           </content></TitledPane>
+                        <TitledPane animated="false" prefHeight="130.0" prefWidth="144.0" text="Comparer">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="176.0" prefWidth="142.0">
+                                 <children>
+                                    <Button fx:id="btnComparerAnnee" layoutX="-4.0" mnemonicParsing="false" onAction="#comparerAnnee" prefHeight="35.0" prefWidth="150.0" text="Comparer Année" />
+                                    <Button fx:id="btnComparerMois" layoutX="-4.0" layoutY="35.0" mnemonicParsing="false" onAction="#comparerMois" prefHeight="35.0" prefWidth="150.0" text="Comparer Mois" />
+                                    <Button fx:id="btnComparerJour" layoutX="-4.0" layoutY="70.0" mnemonicParsing="false" onAction="#comparerJour" prefHeight="35.0" prefWidth="150.0" text="Comparer Jour" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="135.0" prefWidth="144.0" text="Liste des Fichier ">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button layoutX="-3.0" mnemonicParsing="false" onAction="#listFichier" prefHeight="35.0" prefWidth="150.0" text="Liste Fichier" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="522.0" prefWidth="727.0">
+               <children>
+                  <TabPane fx:id="tabPane" prefHeight="522.0" prefWidth="756.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="label" text="Bienvenue sur SmartClimate" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="100.0">
+                     <font>
+                        <Font name="Calibri Italic" size="41.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

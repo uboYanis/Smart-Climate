@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="395.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Table.MoisController">
+   <children>
+      <TableView fx:id="tableViewMois" layoutX="18.0" layoutY="189.0" prefHeight="206.0" prefWidth="525.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="168.0">
+         <columns>
+            <TableColumn fx:id="colHoraireMois" prefWidth="114.0" text="Jour" />
+            <TableColumn fx:id="colTemperatureMois" prefWidth="130.0" text="Temperature" />
+            <TableColumn fx:id="colHumiditeMois" prefWidth="136.0" text="Humidite" />
+            <TableColumn fx:id="colNebulositeMois" prefWidth="144.0" text="nebulosite" />
+         </columns>
+      </TableView>
+      <ChoiceBox fx:id="tabMoisStation" layoutX="16.0" layoutY="57.0" prefHeight="25.0" prefWidth="186.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="37.0" />
+      <Label layoutX="20.0" layoutY="30.0" prefHeight="22.0" prefWidth="76.0" text="Station" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="tabMoisAnnee" layoutX="215.0" layoutY="57.0" prefHeight="25.0" prefWidth="101.0" AnchorPane.topAnchor="37.0" />
+      <Label layoutX="216.0" layoutY="30.0" prefHeight="22.0" prefWidth="76.0" text="Année" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="tabMoisOperation" layoutX="444.0" layoutY="57.0" prefHeight="25.0" prefWidth="106.0" AnchorPane.topAnchor="37.0" />
+      <Label layoutX="444.0" layoutY="30.0" prefHeight="22.0" prefWidth="76.0" text="Opération" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="afficherMois" layoutX="674.0" layoutY="37.0" mnemonicParsing="false" onAction="#afficherMois" text="Afficher" AnchorPane.topAnchor="37.0">
+         <font>
+            <Font name="Cambria" size="13.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="tabMoisMois" layoutX="330.0" layoutY="57.0" prefHeight="25.0" prefWidth="102.0" AnchorPane.topAnchor="37.0" />
+      <Label layoutX="330.0" layoutY="30.0" prefHeight="22.0" prefWidth="76.0" text="Mois" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="tabMoisprogressBar" layoutX="18.0" layoutY="148.0" prefHeight="37.0" prefWidth="525.0" progress="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="126.0" />
+      <Label fx:id="tabMoisMessageProgression" layoutX="16.0" layoutY="106.0" prefHeight="32.0" prefWidth="527.0" text="progression du transfert des données" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="94.0">
+         <font>
+            <Font name="Cambria" size="17.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="check" layoutX="558.0" layoutY="33.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="101.0" text="CheckBox" />
+   </children>
+</AnchorPane>
